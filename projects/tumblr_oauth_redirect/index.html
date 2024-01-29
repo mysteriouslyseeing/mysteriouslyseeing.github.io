@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<p>Redirecting...</p>
+
+<script>
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const code = urlParams.get("code");
+  const state = urlParams.get("state");
+  window.location.replace("https://127.0.0.1:" + state + "/?code=" + code)
+</script>
